@@ -2,8 +2,8 @@ const Order = require("../models/Order");
 
 const orderController = {
   updateOrder: async (req, res) => {
-    const { userID, order } = req.body;
     try {
+      const { userID, order } = req.body;
       const isUserExist = await Order.findOne({ user: userID });
       if (isUserExist) {
         await Order.findOneAndUpdate(
