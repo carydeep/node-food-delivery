@@ -29,7 +29,7 @@ const orderController = {
           });
       }
     } catch (error) {
-      return res.status(500).json(err.message);
+      return res.status(500).json(error.message);
     }
   },
 };
