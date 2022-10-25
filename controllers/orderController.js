@@ -12,7 +12,9 @@ const orderController = {
             orderItems: order.orderItems,
             totalAmount: order.totalAmount,
           }
-        );
+        ).then((result) => {
+          return res.status(200).json(result);
+        });
       } else {
         const newOrder = new Order({
           user: userID,
