@@ -36,7 +36,7 @@ const billController = {
   },
   getBill: async (req, res) => {
     try {
-      const { iduser } = req.params;
+      const { iduser } = req.body;
       const bills = await Bill.find({ user: iduser });
       return res.status(200).json(bills);
     } catch (error) {
