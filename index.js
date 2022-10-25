@@ -17,7 +17,13 @@ mongoose
     console.log(err);
   });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://fooddelivery-livid.vercel.app",
+    // origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api", orderRoute);
 app.use("/api", billRoute);
