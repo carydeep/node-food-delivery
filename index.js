@@ -19,8 +19,8 @@ mongoose
 
 app.use(
   cors({
-    // origin: "https://fooddelivery-livid.vercel.app",
-    origin: "http://localhost:3000",
+    origin: "https://fooddelivery-livid.vercel.app",
+    // origin: "http://localhost:3000",
   })
 );
 app.use(express.json());
