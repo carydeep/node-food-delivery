@@ -2,7 +2,7 @@ const { createBill, getBill } = require("../controllers/billController");
 
 const router = require("express").Router();
 
-router.get("/bill", getBill);
-router.post("/bill", createBill);
+router.get("/", getBill);
+router.post("/post", createBill);
 
 module.exports = router;

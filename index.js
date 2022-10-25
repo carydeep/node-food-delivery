@@ -25,8 +25,8 @@ app.use(
   })
 );
 app.use(express.json());
-app.use("/api", orderRoute);
-app.use("/api", billRoute);
+app.use("/api/order", orderRoute);
+app.use("/api/bill", billRoute);
 
 app.listen(process.env.PORT || 6969, () => {
   console.log("Server is running");
